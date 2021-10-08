@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Joe's HotDog Stand</title>
+</head>
+<body>
+
+    <h1>Welcome to Joe's HotDogs!</h1>
+    <h3>Delicious Food and Fast Delivery!</h3>
+
+    <script language='JavaScript'>
+        hotDogs = prompt("Welcome to Joe's HotDogs!\nWe're ready to receive your order!\nHotDogs: ");
+        fries = prompt("Welcome to Joe's HotDogs!\nWe're ready to receive your order!\nFrench Fries: ");
+        drinks = prompt("Welcome to Joe's HotDogs!\nWe're ready to receive your order!\nDrinks: ");
+        
+        hotDogs = hotDogs * 3.75;
+        hotDogsRounded = Math.round((hotDogs + Number.EPSILON) * 100) / 100;
+
+        fries = fries * 2.00;
+        friesRounded = Math.round((fries + Number.EPSILON) * 100) / 100;
+
+        drinks = drinks * 1.75;
+        drinksRounded = Math.round((drinks + Number.EPSILON) * 100) / 100;
+
+
+        subTotal = hotDogsRounded  + friesRounded + drinksRounded;
+        subTotalRounded = Math.round((subTotal + Number.EPSILON) * 100) / 100;
+
+
+        if (subTotal >= 20) {
+            discount = subTotal * 0.01;
+            discountRounded = Math.round((discount + Number.EPSILON) * 100) / 100;
+
+            taxes = subTotal * 0.0625;
+            taxesRounded = Math.round((taxes + Number.EPSILON) * 100) / 100;
+
+            totalForOrder = subTotal + taxes - discount;
+            totalForOrderRounded = Math.round((totalForOrder + Number.EPSILON) * 100) / 100;
+        }
+        else {
+            discount = 0.00;
+            discountRounded = 0.00;
+
+            taxes = subTotal * 0.0625;
+            taxesRounded = Math.round((taxes + Number.EPSILON) * 100) / 100;
+
+            totalForOrder = subTotal + taxes;
+            totalForOrderRounded = Math.round((totalForOrder + Number.EPSILON) * 100) / 100;
+        }
+    </script>
+
+    <h4>Your Order:</h4>
+    <table>
+        <tr>
+            <th>Order in Quantity</th>
+            <th>Price in $</th>
+        </tr>
+        <tr>
+            <td>Hot Dogs @ $3.75</td>
+            <td><script language='javascript'>document.write(hotDogsRounded)</script></td>
+        </tr>
+        <tr>
+            <td>French Fries @ $2.00</td>
+            <td><script language='javascript'>document.write(friesRounded)</script></td>
+        </tr>
+        <tr>
+            <td>Drinks @ $1.75</td>
+            <td><script language='javascript'>document.write(drinksRounded)</script></td>
+        </tr>
+        <tr>
+            <td>Subtotal</td>
+            <td><script language='javascript'>document.write(subTotalRounded)</script></td>
+        </tr>
+        <tr>
+            <td>Joe's Special Discount (10%)</td>
+            <td><script language='javascript'>document.write(discountRounded)</script></td>
+        </tr>
+        <tr>
+            <td>Taxes</td>
+            <td><script language='javascript'>document.write(taxesRounded)</script></td>
+        </tr>
+        <tr>
+            <td style="font-weight: bold;">Total</td>
+            <td><script language='javascript'>document.write(totalForOrderRounded)</script></td>
+        </tr>
+
+    </table>
+
+    <img src='Images/joes.webp'/>
+
+    <h2>Thank You For Your Order!</h2>
+    <h2>Bon Appetit!</h2>
+
+
+
+
+</body>
+</html>
