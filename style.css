@@ -1,0 +1,25 @@
+
+
+body{
+    background-color: rgba(255,248,220, 0.99);
+    margin-bottom: 100px;
+}
+
+table, th, td {
+    border:1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+  }
+
+img{
+    position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 600px;
+  box-shadow: 0 0 20px 20px white inset;
+}
+
+h2{
+    text-align: center;
+    position: static;
+}
